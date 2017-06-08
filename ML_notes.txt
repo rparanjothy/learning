@@ -1,0 +1,12 @@
+# Machine Learning notes:
+# 6/8/17 - Ramkumar Paranjothy
+
+Supervised learning - we give inputs to the algorithm and also tell what input maps to what output.
+
+2 types of problems:
+Classification problem and Regression Problems
+
+In classification, the possible outputs are called "Classes", if there are N types of outputs, its called "N Class Classification" problem.
+
+For a particular observation, the class it belongs to / the output is called "Label"
+
