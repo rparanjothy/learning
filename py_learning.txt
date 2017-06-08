@@ -32,3 +32,9 @@ import pandas as pd
 pd.__version__ - gives version of pandas.
 
 .__version__ gives the version data.
+
+# install sci-kit learn 0.18
+pip install -U scikit-learn
+
+#########################################################################
+
