@@ -1,0 +1,29 @@
+Python Learnt so far:
+-------------------------
+
+#sin and cos plot gives a circle
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+#sin wave
+r=np.linspace(-10,10,100)
+s=np.sin(r)
+plt.plot(r,s,marker='o')
+# plotting cos and sin gives a circle
+#plt.plot(np.cos(r),s,marker='x')
+plt.plot(r,np.cos(r),marker='x')
+plt.plot(r,np.tan(r),marker='x')
+
+#########################################################################
+
+# Checking versions:
+----------------------
+
+import sys
+sys.version - gives what version of python u are using
+
+import pandas as pd
+pd.__version__ - gives version of pandas.
+
+.__version__ gives the version data.
