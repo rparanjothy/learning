@@ -10,3 +10,57 @@ In classification, the possible outputs are called "Classes", if there are N typ
 
 For a particular observation, the class it belongs to / the output is called "Label"
 
+------------------------------------------------------
+# train_test_split
+from sklearn.model_selection import train_test_split
+
+# this will split the data for you:
+from sklearn.model_selection import train_test_split
+from sklearn.datasets import load_iris
+ir=load_iris()
+X_tr,X_tst,y_train,y_test=train_test_split(ir.data,ir.target,random_state=0)
+
+>>> X_tr.shape
+(112, 4)
+>>> X_tst.shape
+(38, 4)
+>>> y_test.shape
+(38,)
+>>> y_train.shape
+(112,)
+
+# loading test data into a pd DF
+import pandas as pd
+ir_df=pd.DataFrame(X_tr,columns=ir.feature_names)
+
+#scatter plot:
+# using the Y_train for color coding
+# visualizing with scatter plot enables us to see how the data is spread across.
+ir_sc_plt=pd.scatter_matrix(ir_df,c=y_train)
+
+All machine learning models are implemented in their own classes in sklearn - called ESTIMATOR classes.
+
+#K-nearest - KNeighborsClassifier
+
+from sklearn.neighbors import KNeighborsClassifier
+knn=KNeighborsClassifier(1)
+
+>>> knn
+KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=1, p=2,
+           weights='uniform')
+
+>>> knn.fit(X_tr,y_train)
+KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=1, p=2,
+           weights='uniform')
+>>> 
+
+# now predicting:
+>>> x_new=np.array([[5.0,3.0,6,3.5]])
+>>> x_new.shape
+(1, 4)
+>>> knn.predict(x_new)
+array([2])
+
+# this is the class "2"
