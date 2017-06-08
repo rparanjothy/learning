@@ -7,12 +7,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #sin wave
+# generate a series??
 r=np.linspace(-10,10,100)
 s=np.sin(r)
+
 plt.plot(r,s,marker='o')
+
 # plotting cos and sin gives a circle
-#plt.plot(np.cos(r),s,marker='x')
+plt.plot(np.cos(r),s,marker='x')
+# cos plot
 plt.plot(r,np.cos(r),marker='x')
+#tan plot
 plt.plot(r,np.tan(r),marker='x')
 
 #########################################################################
